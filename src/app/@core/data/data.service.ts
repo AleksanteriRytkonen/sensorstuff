@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { tap } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
 import { SensorData } from '../models/sensordata';
 import { Observable } from 'rxjs';
 
@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  apiUrl = 'http://localhost:5000';
+  /* apiUrl = 'http://localhost:5000'; */
+  apiUrl = 'http://192.168.1.106:5000';
   tempsUrl = '/sensors/';
 
   httpOptions = {
@@ -24,5 +25,6 @@ export class DataService {
       /* tap(data => console.log(data)) */
     );
   }
+
 
 }

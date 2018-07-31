@@ -1,4 +1,6 @@
 export interface SensorData {
-    'time': string;
-    'celsius': string;
+    'date': string;
+    'lightness': number;
+    'moisture': number;
+    'temperature': number;
 }

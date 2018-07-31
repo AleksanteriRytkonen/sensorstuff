@@ -1,10 +1,12 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/';
+import { HeaderComponent, ChartComponent } from './components/';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ChartsModule } from 'ng2-charts';
 
 const COMPONENTS = [
-  HeaderComponent
+  HeaderComponent,
+  ChartComponent
 ];
 
 const BASE_MODULES = [CommonModule];
@@ -12,7 +14,8 @@ const BASE_MODULES = [CommonModule];
 @NgModule({
   imports: [
     NgbModule,
-    ...BASE_MODULES
+    ...BASE_MODULES,
+    ChartsModule
   ],
   exports: [...COMPONENTS, NgbModule, ...BASE_MODULES],
   declarations: [...COMPONENTS]

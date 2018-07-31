@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './@core/core.module';
 import { AppComponent } from './app.component';
-import { ChartsModule } from 'ng2-charts';
+/* import { ChartsModule } from 'ng2-charts'; */
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +16,7 @@ import { APP_BASE_HREF } from '../../node_modules/@angular/common';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ChartsModule,
+    /* ChartsModule, */
     AppRoutingModule,
     CoreModule.forRoot(),
     ThemeModule.forRoot(),

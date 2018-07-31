@@ -1,3 +1,24 @@
-<p>
-  dashboard works!
-</p>
+<app-header></app-header>
+<div class="wrapper">
+  <ng-container *ngIf="dataLoaded">
+    <div class="border">
+      <app-chart [datasets]="temperatureDataset" [chartType]="'line'" [labels]="labels" [colors]="temperatureColors"></app-chart>
+    </div>
+    <div class="border">
+       <h5>Lower value means wetter soil (values under 800-900 are good, values under 400 means its extremely wet)</h5>
+      <app-chart [datasets]="moistureDataset" [chartType]="'line'" [labels]="labels" [colors]="moistureColors"></app-chart>      
+      <span *ngIf="isWateringRequired; else noNeed" class="danger">You should water ur plants asap!</span>
+      <ng-template #noNeed>
+        <span class="all-good">No need for watering right now</span>
+      </ng-template>
+    </div>
+    <div class="border">
+       <h5>Lower value means brighter light</h5>
+      <app-chart [datasets]="lightDataset" [chartType]="'line'" [labels]="labels" [colors]="lightColors"></app-chart>
+    </div>
+    <div class="border">
+       <h5>Min Avg and Max temperatures..</h5>
+      <app-chart [datasets]="maxMinAvg" [chartType]="'bar'"></app-chart>      
+    </div>
+  </ng-container>
+</div>
