@@ -59,7 +59,6 @@ export class DashboardComponent implements OnInit {
       this.lightDataset.push(this.chartDatasetGenerator(lights, 'Lights')); 
       this.maxMinAvg = this.filterHighAvgLow(this.temperatureDataset[0].data);
       this.isWateringRequired = this.doPlantsNeedWatering(moistures[moistures.length - 1]);
-      /* console.log(this.maxMinAvg); */
 
       this.dataLoaded = true;
     });
@@ -78,7 +77,7 @@ export class DashboardComponent implements OnInit {
     return minMaxAvg;
   }
 
-  chartDatasetGenerator(data: any, label: string) {
+  chartDatasetGenerator(data: number[], label: string): {} {
     const chart = {
       data: data,
       label: label
