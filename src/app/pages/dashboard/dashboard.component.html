@@ -5,7 +5,7 @@
       <app-chart [datasets]="temperatureDataset" [chartType]="'line'" [labels]="labels" [colors]="temperatureColors"></app-chart>
     </div>
     <div class="border">
-       <h5>Lower value means wetter soil (values under 800-900 are good, values under 400 means its extremely wet)</h5>
+       <h5>Lower value means wetter soil (values under 800 are good, values under 400 means its extremely wet)</h5>
       <app-chart [datasets]="moistureDataset" [chartType]="'line'" [labels]="labels" [colors]="moistureColors"></app-chart>      
       <span *ngIf="isWateringRequired; else noNeed" class="danger">You should water ur plants asap!</span>
       <ng-template #noNeed>
