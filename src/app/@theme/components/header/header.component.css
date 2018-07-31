@@ -3,6 +3,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     justify-items: center;
-    background-color: #242f42;
+    background-color: var(--main-black);
     color: #b8c1d1;
 }
